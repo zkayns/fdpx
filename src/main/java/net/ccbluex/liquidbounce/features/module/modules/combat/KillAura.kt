@@ -58,7 +58,7 @@ class KillAura : Module() {
      */
 
     // CPS - Attack speed 
-    private val maxCpsValue: IntegerValue = object : IntegerValue("MaxCPS", 12, 1, 20) {
+    private val maxCpsValue: IntegerValue = object : IntegerValue("MaxCPS", 8, 1, 26) {
         override fun onChanged(oldValue: Int, newValue: Int) {
             val i = minCpsValue.get()
             if (i > newValue) set(i)
@@ -67,7 +67,7 @@ class KillAura : Module() {
         }
     }
 
-    private val minCpsValue: IntegerValue = object : IntegerValue("MinCPS", 8, 1, 20) {
+    private val minCpsValue: IntegerValue = object : IntegerValue("MinCPS", 2, 1, 26) {
         override fun onChanged(oldValue: Int, newValue: Int) {
             val i = maxCpsValue.get()
             if (i < newValue) set(i)
@@ -80,13 +80,13 @@ class KillAura : Module() {
     private val combatDelayValue = BoolValue("1.9CombatDelay", false)
 
     // Range  
-    val rangeValue = object : FloatValue("Range", 3.7f, 1f, 8f) {
+    val rangeValue = object : FloatValue("Range", 3.7f, 1f, 9f) {
         override fun onChanged(oldValue: Float, newValue: Float) {
             val i = discoverRangeValue.get()
             if (i < newValue) set(i)
         }
     }
-    private val throughWallsRangeValue = object : FloatValue("ThroughWallsRange", 1.5f, 0f, 8f) {
+    private val throughWallsRangeValue = object : FloatValue("ThroughWallsRange", 1.5f, 0f, 9f) {
         override fun onChanged(oldValue: Float, newValue: Float) {
             val i = rangeValue.get()
             if (i < newValue) set(i)
@@ -107,7 +107,7 @@ class KillAura : Module() {
     private val noFlyValue = BoolValue("NoFly", false)
 
     // Modes
-    private val priorityValue = ListValue("Priority", arrayOf("Health", "Distance", "Fov", "LivingTime", "Armor", "HurtResistance", "HurtTime", "HealthAbsorption", "RegenAmplifier"), "Armor")
+    private val priorityValue = ListValue("Priority", arrayOf("Health", "Distance", "FOV", "LivingTime", "Armor", "HurtResistance", "HurtTime", "HealthAbsorption", "RegenAmplifier"), "Armor")
     private val targetModeValue = ListValue("TargetMode", arrayOf("Single", "Switch", "Multi"), "Switch")
 
     // Bypass
