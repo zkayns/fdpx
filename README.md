@@ -6,9 +6,6 @@
 ## How Do I Install FDPX?
 [Click for instructions](docs/INSTALLING.md)
 
-## The Staff
-[Click here to find out about the team](docs/TEAM.md)
-
 ## Issues
 Found bugs or a missing features? You can let us know by opening an issue [here](https://github.com/zkayns/fdpx/issues)!
 
