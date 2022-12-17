@@ -1,9 +1,9 @@
 <div align="center">
-<h1>FDPCLIENT</h1>
+<h1>FDPX</h1>
 <h3>A free mixin-based injection hacked-client for Minecraft using Minecraft Forge, based on LiquidBounce and FDP Client.</h3>
 </div>
 
-## How Do I Install FDP?
+## How Do I Install FDPX?
 [Click for instructions](docs/INSTALLING.md)
 
 ## The Staff
