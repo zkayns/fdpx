@@ -20,7 +20,7 @@ import kotlin.math.sin
 @ModuleInfo(name = "BoatFly", category = ModuleCategory.MOVEMENT)
 class BoatFly : Module() {
     private val modeValue = ListValue("Mode", arrayOf("Motion", "Clip", "Velocity"), "Motion")
-    private val speedValue = FloatValue("Speed", 0.3f, 0.0f, 1.0f)
+    private val speedValue = FloatValue("Speed", 0.1f, 0.0f, 1.5f)
 
     override fun onEnable() {
     }
